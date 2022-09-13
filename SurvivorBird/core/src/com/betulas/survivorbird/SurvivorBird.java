@@ -21,7 +21,7 @@ public class SurvivorBird extends ApplicationAdapter {
 	float birdY=0;
 	int gameState=0;
 	Random random;
-	float velocity=0; //Artan hız integer
+	float velocity=0; 
 	float gravity=0.1f;
 	Texture bee;
 	Texture bee2;
