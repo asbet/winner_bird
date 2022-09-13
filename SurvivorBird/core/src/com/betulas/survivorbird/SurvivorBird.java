@@ -33,7 +33,7 @@ public class SurvivorBird extends ApplicationAdapter {
 	BitmapFont bitmapFont;
 	BitmapFont gameOver;
 
-	// farklı farklı yerlerde karşımıza çıkacağı için dizi şeklinde tanımlarsak olur
+	
 	float [] enemyX=new float[numberOfEnemies];
 
 	float []EnemyOffset=new float[numberOfEnemies];
@@ -50,10 +50,8 @@ public class SurvivorBird extends ApplicationAdapter {
 
 	@Override
 	public void create () {
-//sprite obje demek oyun objeleri
-		shapeRenderer=new ShapeRenderer(); //Shaperenderer kullanarak  circle ları çizdiriceğiz
+		shapeRenderer=new ShapeRenderer(); 
 		batch=new SpriteBatch();
-
 		bitmapFont=new BitmapFont();
 		bitmapFont.setColor(Color.WHITE);
 		bitmapFont.getData().setScale(4);
@@ -89,7 +87,7 @@ public class SurvivorBird extends ApplicationAdapter {
 	}
 
 	@Override
-	public void render () {	//Oyunda devam ettiği sürece devamlı çaprılan metod
+	public void render () {	
 		batch.begin();
 		batch.draw(background,0,0, Gdx.graphics.getWidth(),Gdx.graphics.getHeight());
 		if(gameState==1) {
@@ -104,7 +102,7 @@ public class SurvivorBird extends ApplicationAdapter {
 			if (Gdx.input.justTouched()) {
 				velocity = -14;
 			}
-			//Dizileri belirleyeceğimiz bir loop yapmamız gerekecek
+			
 			for (int i = 0; i < numberOfEnemies; i++) {//
 				if(enemyX[i]<Gdx.graphics.getWidth() / 15){
 					enemyX[i]=enemyX[i] +numberOfEnemies*distance;
